@@ -1,0 +1,2 @@
+const colors = { pending: 'bg-amber-100 text-amber-700', 'in-progress': 'bg-blue-100 text-blue-700', completed: 'bg-emerald-100 text-emerald-700', low: 'bg-slate-100 text-slate-600', medium: 'bg-orange-100 text-orange-700', high: 'bg-rose-100 text-rose-700' };
+export default function StatusBadge({ value }) { return <span className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold capitalize ${colors[value] || 'bg-slate-100'}`}>{value?.replace('-', ' ')}</span>; }
